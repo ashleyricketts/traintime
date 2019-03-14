@@ -10,15 +10,25 @@ var config = {
 
   firebase.initializeApp(config);
 
-  var database = firbase.database();
+  var database = firebase.database();
 
-  $("#add-train-btn").on("click", function(event){
-        event.preventDefault();
+  
+  // Variables
+  var trainName = "";
+  var destination = "";
+  var startTime = "";
+  var frequency = 0;
 
-        var trnName = $("#train-name-input").val().trim();
-        var trnDestination = 
-        var trntime = 
-        var trnFrequency = 
 
+  // Current Time
+  function currentTime() {
+      var current = moment().format('LT');
+      $("#current-time").html(current);
+      setTimeout(currentTime, 1000);
+  };
 
-  })
+  currentTime();
+
+  
+
+        
